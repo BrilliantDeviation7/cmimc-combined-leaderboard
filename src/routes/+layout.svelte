@@ -1,6 +1,9 @@
 <nav>
   <ul>
     <li>
+      <a href="/twomaze">Two Maze</a>
+    </li>
+    <li>
       <a href="/auction">Auction</a>
     </li>
     <li>
