@@ -9,6 +9,9 @@
   let teams = data.L3_teams;
   // $: console.log(data);
 
+  let now = new Date();
+  let currentMinute = now.getMinutes();
+
   onMount(() => {
     if (!teams) return;
     const teamsArray = Object.entries(teams).map(([key, value]) => [key, ...value]);
@@ -85,6 +88,8 @@
     target="_blank"
     rel="noreferrer">repository</a
   >.
+  <br />
+  Last updated {(currentMinute - data.lastFetched + 60) % 60} minutes ago.
 </p>
 
 <div id="wrapper" />
