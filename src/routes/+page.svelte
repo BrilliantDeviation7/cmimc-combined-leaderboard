@@ -7,7 +7,7 @@
 
   export let data: PageData;
   let teams = data.L3_teams;
-  $: console.log(data);
+  // $: console.log(data);
 
   onMount(() => {
     if (!teams) return;

@@ -13,7 +13,7 @@ type L3 = {
   [key: string]: number[];
 };
 
-const INTERVAL = 1; // minutes
+const INTERVAL = 5; // minutes
 
 function updateLastRunTime(currentRun: number, data: any) {
   lastRunMinute = currentRun;
