@@ -10,7 +10,7 @@ dotenv.config();
 import type { PageServerLoad } from './$types';
 
 type L3 = {
-  [key: string]: number[];
+  [key: string]: any[];
 };
 
 const INTERVAL = 5; // minutes
@@ -66,7 +66,7 @@ export const load = (async ({ params }) => {
         // if team didn't submit, give Infinity score
         for (const team in L3_teams) {
           if (teamsSubmitted.indexOf(team) < 0) {
-            L3_teams[team].push(Infinity);
+            L3_teams[team].push('');
           }
         }
         return L3_teams;
