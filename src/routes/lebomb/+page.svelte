@@ -6,7 +6,7 @@
   import 'gridjs/dist/theme/mermaid.css';
 
   export let data: PageData;
-  let teams = data.teams;
+  let teams = data.teams.reverse();
 
   onMount(() => {
     if (!teams) return;
