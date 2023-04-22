@@ -7,10 +7,11 @@
 
   export let data: PageData;
   let teams = data.L3_teams;
+  $: console.log(data);
 
   onMount(() => {
+    if (!teams) return;
     const teamsArray = Object.entries(teams).map(([key, value]) => [key, ...value]);
-    console.log(teamsArray);
     const grid = new Grid({
       columns: [
         {
