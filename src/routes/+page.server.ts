@@ -43,7 +43,7 @@ export const load = (async ({ params }) => {
   }
 
   let L3_teams: L3 = {};
-  for (let i = 4; i <= 4; i++) {
+  for (let i = 4; i <= 14; i++) {
     console.log('FETCHING new data!');
     const response = await axios
       .get(process.env.URL + i)
