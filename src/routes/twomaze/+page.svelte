@@ -6,15 +6,23 @@
   import 'gridjs/dist/theme/mermaid.css';
 
   export let data: PageData;
-  let teams = data.teams;
 
   onMount(() => {
+    const teams = data.teams;
+    for (let i = 0; i < teams.length; i++) {
+      teams[i] = [i + 1, ...teams[i]];
+    }
     if (!teams) return;
+
     const grid = new Grid({
       columns: [
         {
+          name: 'Rank',
+          width: '50px'
+        },
+        {
           name: 'Team',
-          width: '190px'
+          width: '200px'
         },
         {
           name: 'Score',
