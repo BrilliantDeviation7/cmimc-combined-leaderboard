@@ -140,12 +140,10 @@
   }
 
   #wrapper {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 
   p {
-    margin-left: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
   }
 </style>

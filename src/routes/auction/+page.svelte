@@ -52,6 +52,6 @@
   }
 
   #wrapper {
-    padding: 0 50px;
+    padding: 0 20px;
   }
 </style>

@@ -1,3 +1,10 @@
+<script lang="ts">
+  import { dev } from '$app/environment';
+  import { inject } from '@vercel/analytics';
+
+  inject({ mode: dev ? 'development' : 'production' });
+</script>
+
 <nav>
   <ul>
     <li>
@@ -41,20 +48,29 @@
   }
 
   nav {
-    margin-left: 12px;
+    margin-left: -18px;
   }
 
   nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     font-size: 20px;
   }
 
   h1,
   p {
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>
