@@ -21,9 +21,11 @@ export const load = (async ({ params }) => {
 
       const rows = body.find('tr');
       rows.each((i, row) => {
-        const name: string = $(row).find('th').text();
-        const score = Number($(row).find('td').text());
-        teams.push([name, score]);
+        const rank: number = Number($(row).find('th').text());
+        const cells = $(row).find('td');
+        const name = cells.eq(0).text();
+        const score = Number(cells.eq(1).text());
+        teams.push([rank, name, score]);
       });
       return teams;
     })
@@ -34,5 +36,5 @@ export const load = (async ({ params }) => {
       };
     });
 
-  return { teams: teams };
+  return { teams };
 }) satisfies PageServerLoad;

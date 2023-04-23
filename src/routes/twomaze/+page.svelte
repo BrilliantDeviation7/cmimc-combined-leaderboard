@@ -9,9 +9,6 @@
 
   onMount(() => {
     const teams = data.teams;
-    for (let i = 0; i < teams.length; i++) {
-      teams[i] = [i + 1, ...teams[i]];
-    }
     if (!teams) return;
 
     const grid = new Grid({

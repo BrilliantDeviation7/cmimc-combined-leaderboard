@@ -8,10 +8,7 @@
   export let data: PageData;
 
   onMount(() => {
-    const teams = data.teams.reverse();
-    for (let i = 0; i < teams.length; i++) {
-      teams[i] = [i + 1, ...teams[i]];
-    }
+    const teams = data.teams;
     if (!teams) return;
 
     const grid = new Grid({

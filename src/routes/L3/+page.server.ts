@@ -54,12 +54,13 @@ export const load = (async ({ params }) => {
         const rows = body.find('tr');
         let teamsSubmitted: string[] = [];
         rows.each((i, row) => {
-          const name: string = $(row).find('th').text();
+          const cells = $(row).find('td');
+          const name: string = cells.eq(0).text();
+          const score: number = Number(cells.eq(1).text());
           teamsSubmitted.push(name);
           if (!L3_teams[name]) {
             L3_teams[name] = [];
           }
-          const score = Number($(row).find('td').text());
           L3_teams[name].push(score);
         });
 
