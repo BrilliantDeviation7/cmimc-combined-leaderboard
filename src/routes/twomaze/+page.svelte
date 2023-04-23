@@ -22,7 +22,19 @@
           width: '200px'
         },
         {
-          name: 'Score',
+          name: 'Total Score',
+          width: '100px'
+        },
+        {
+          name: 'Score 1',
+          width: '100px'
+        },
+        {
+          name: 'Score 2',
+          width: '100px'
+        },
+        {
+          name: 'Score 3',
           width: '100px'
         }
       ],

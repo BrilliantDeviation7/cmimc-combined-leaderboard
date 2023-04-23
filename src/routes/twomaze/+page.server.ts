@@ -24,8 +24,11 @@ export const load = (async ({ params }) => {
         const rank: number = Number($(row).find('th').text());
         const cells = $(row).find('td');
         const name = cells.eq(0).text();
-        const score = Number(cells.eq(1).text());
-        teams.push([rank, name, score]);
+        const totalScore = Number(cells.eq(1).text());
+        const score1 = Number(cells.eq(2).text());
+        const score2 = Number(cells.eq(3).text());
+        const score3 = Number(cells.eq(4).text());
+        teams.push([rank, name, totalScore, score1, score2, score3]);
       });
       return teams;
     })
