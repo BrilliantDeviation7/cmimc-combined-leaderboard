@@ -65,12 +65,16 @@
     margin-bottom: 20px;
   }
 
-  a {
+  li a {
     text-decoration: none;
     color: black;
   }
 
-  a:hover {
+  li a:hover {
     text-decoration: underline;
+  }
+
+  p a {
+    color: green;
   }
 </style>
